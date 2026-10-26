@@ -12,4 +12,19 @@ public class Rekening {
     public int getSaldo() {
         return saldo;
     }
+    public boolean setor(int jumlah) {
+        if (jumlah <= 0) {
+            return false;
+        }
+        saldo += jumlah;
+        return true;
+    }
+
+    public boolean tarik(int jumlah) {
+        if (jumlah <= 0 || jumlah > saldo) {
+            return false;
+        }
+        saldo -= jumlah;
+        return true;
+    }
 }
