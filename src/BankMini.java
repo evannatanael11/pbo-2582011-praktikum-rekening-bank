@@ -4,6 +4,8 @@ public class BankMini {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Rekening rekening = new Rekening("001", "Ani", 100000);
+// rekening.saldo = 1000000;
+// Error: java: saldo has private access in Rekening
 
         System.out.println("============ BANK MINI ============");
         System.out.println("Rekening 001 a.n. Ani");
