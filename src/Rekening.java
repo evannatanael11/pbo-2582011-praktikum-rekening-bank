@@ -27,4 +27,22 @@ public class Rekening {
         saldo -= jumlah;
         return true;
     }
+
+    public void cetakInfo() {
+        System.out.println(nomor + " | " + pemilik + " | " + formatRupiah(saldo));
+    }
+
+    private String formatRupiah(int angka) {
+        String s = String.valueOf(angka);
+        String hasil = "";
+        int hitung = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            hasil = s.charAt(i) + hasil;
+            hitung++;
+            if (hitung % 3 == 0 && i > 0) {
+                hasil = "." + hasil;
+            }
+        }
+        return "Rp" + hasil;
+    }
 }
